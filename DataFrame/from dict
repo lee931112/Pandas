@@ -1,0 +1,17 @@
+import pandas as pd
+#dict
+data = {
+  "calories": [420, 380, 390],
+  "duration": [50, 40, 45]
+}
+print(type(data))
+ 
+#series
+myseri = pd.Series(data)
+print(myseri)
+print(type(myseri))
+ 
+#DataFrame
+mydfarm = pd.DataFrame(myseri)
+print(mydfarm)
+print(type(mydfarm))
