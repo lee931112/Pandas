@@ -1,0 +1,30 @@
+#workshop - Series資料分堆
+import pandas as pd
+ 
+#input 10個英文或數字，逗點分開，產生陣列
+serlst = input("請輸入 10 個英文或數字，以 , 隔開 :").split(",") 
+print(serlst)
+ 
+ 
+#分堆
+index = []
+for obj in serlst :
+  if obj.isdigit():
+    index.append('int')
+  else:
+    index.append('str')
+print(index)
+ 
+mysers = pd.Series(serlst,index)
+print(mysers)
+ 
+#查詢資料型態：
+ 
+chktype = input("請輸入你想要查詢的型態（int or str）:")
+ 
+if chktype == 'int':
+  print(mysers['int'])
+else:
+  print(mysers['str'])
+ 
+
