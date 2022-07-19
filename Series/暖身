@@ -1,0 +1,25 @@
+# 原始成績
+oldscorelst = [{"score": 51}, {"score": 64}, {"score": 63}, {"score": 66}, {"score": 62}, {"score": 63}, {"score": 70}, {"score": 60}, {"score": 64}, {"score": 52}, {"score": 66}, {"score": 64}, {"score": 55}, {"score": 60}, {"score": 52}, {"score": 69}]
+
+# 寫出一個 4 x 4 的迴圈
+rows = 4
+cols = 4
+#起始值
+n = 0
+matrix = []
+for i in range(rows):
+  row = []
+  for j in range(cols):
+    newscore = int(input('stu-'+str(n)+'成績：'))
+    newdict={}
+    newdict['name'] = 'stu' + str(n)
+    newdict['score'] = newscore
+    newdict['delta'] = newscore - oldscorelst[n]['score']  
+    
+    row.append(newdict)
+    n=n+1
+  matrix.append(row)
+
+print(matrix)
+
+
