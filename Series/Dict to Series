@@ -1,0 +1,6 @@
+# workshop - 字典的 {“key”:“value”} 轉 Series
+ 
+studic = {"english": 80, "chinese": 60, "math": 70}
+ 
+myseri = pd.Series(studic)
+print(myseri['english']+myseri['chinese'])
