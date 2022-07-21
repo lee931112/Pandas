@@ -1,0 +1,14 @@
+import pandas as pd
+data = {
+  "calories": [420, 380, 390],
+  "duration": [50, 40, 45]
+}
+ 
+#load data into a DataFrame object:
+df = pd.DataFrame(data)
+print(df)
+#
+indexput = int(input('請輸入你要顯示的 index 個數:')) -1
+ 
+print(df.loc[0:indexput])
+
